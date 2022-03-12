@@ -1,0 +1,248 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="theme-color" content="#7952b3">
+	
+	<title>NOME</title>
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">   
+	<link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">   
+	<link href="./src/css/main.css" rel="stylesheet">    
+</head>
+<body>
+	
+	<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm">
+		<div class="container-fluid">
+			<a class="navbar-brand text-primary" href="#">Nome do Sistema</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link link-secondary active" aria-current="page" href="#">Buscar Imóveis</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link-secondary" href="#">Sou Imobiliária</a>
+					</li>
+					<li class="nav-item">
+						<div class="dropdown">
+							<a class="nav-link link-secondary dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+								Sobre
+							</a>
+							
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<li><a class="dropdown-item" href="#">Sobre a Empresa</a></li>
+								<li><a class="dropdown-item" href="#">Guias/Ajuda</a></li>
+								<li><a class="dropdown-item" href="#">Parceiros</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<form class="d-flex">
+					<button class="btn btn-light me-3" type="submit">Registre-se</button>
+					<button class="btn btn-outline-secondary" type="submit">Entrar</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	
+	<main>
+		<div class="banner d-flex flex-column pt-3 pb-3 mb-5 shadow">
+			
+			<div class="container m-auto">				
+				<h1 class="text-white mb-3 svg-shadow-xs" style="text-shadow: rgba(0,0,0,.75) 0.1em 0.1em 0.4em">
+					Encontre o imóvel dos seus sonhos!
+				</h1>
+				<div class="bg-white p-4 rounded-3 shadow">
+					<div class="row">
+						<div class="col-xl-4 col-lg-6 col-md-12 mb-3">
+							<label class="form-label">O que você precisa?</label>
+							<div class="btn-group d-flex" role="group" aria-label="Opções do que você precisa">
+								<input type="radio" class="btn-check" name="opcoesPesquisa" id="btnAlugar" autocomplete="off" checked>
+								<label class="btn btn-lg btn-outline-primary w-100" for="btnAlugar">Alugar</label>
+								
+								<input type="radio" class="btn-check" name="opcoesPesquisa" id="btnComprar" autocomplete="off">
+								<label class="btn btn-lg btn-outline-primary w-100" for="btnComprar">Comprar</label>
+								
+								<input type="radio" class="btn-check" name="opcoesPesquisa" id="btnTemporada" autocomplete="off">
+								<label class="btn btn-lg btn-outline-primary  w-100" for="btnTemporada">Temporada</label>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 mb-3">
+							<label class="form-label">De que tipo?</label>
+							<select id="selectTipo" class="form-select form-select-lg" aria-label="Default select example">
+								<option selected>Apartamento</option>
+								<option>Casa</option>								
+								<option>Lote</option>
+							</select>
+						</div>
+						<div class="col-xl-3 col-lg-12 col-md-6 mb-3">
+							<label class="form-label" for="inputOnde">Onde?</label>
+							<input type="email" class="form-control  form-control-lg" id="inputOnde" placeholder="Nome da cidade/bairro">
+						</div>
+						<div class="col-xl-2 col-lg-12 mb-3 d-flex flex-column">
+							<button class="btn btn-lg btn-primary w-100 mt-auto">Buscar</button>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		
+		<div class="container">
+			<h2 class="mb-5">Últimos Imóveis Cadastrados</h2>			
+			
+			<div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				
+				<div class="carousel-inner pb-5">
+					<div class="carousel-item active"  data-bs-interval="1000000">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="card mb-3 rounded-3">
+									<img src="./src/img/slide1.jpg" class="rounded-3" />
+									<div class="card-body">
+										<p class="card-text"><i class="bi bi-geo-alt text-primary"></i> Brasília, DF</p>
+										<p>
+											<strong>R$ 1.200,00</strong></br>
+											<small>+ R$ 300,00 de condomínio</small>
+										</p>
+										<small class="d-flex justify-content-start">
+											<span class="me-3"><i class="bi bi-rulers text-primary"></i> 55 m²</span>
+											<span class="me-3"><i class="bi bi-moon text-primary"></i> 1 quarto</span>
+											<span class="me-3"><i class="bi bi-droplet text-primary"></i> 1 banheiro</span>
+										</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card mb-3 rounded-3">
+									<img src="./src/img/slide2.jpg" class="rounded-3" />
+									<div class="card-body">
+										<p class="card-text"><i class="bi bi-geo-alt text-primary"></i> Brasília, DF</p>
+										<p>
+											<strong>R$ 1.200,00</strong></br>
+											<small>+ R$ 300,00 de condomínio</small>
+										</p>
+										<small class="d-flex justify-content-start">
+											<span class="me-3"><i class="bi bi-rulers text-primary"></i> 55 m²</span>
+											<span class="me-3"><i class="bi bi-moon text-primary"></i> 1 quarto</span>
+											<span class="me-3"><i class="bi bi-droplet text-primary"></i> 1 banheiro</span>
+										</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card mb-3 rounded-3">
+									<img src="./src/img/slide3.jpg" class="rounded-3" />
+									<div class="card-body">
+										<p class="card-text"><i class="bi bi-geo-alt text-primary"></i> Brasília, DF</p>
+										<p>
+											<strong>R$ 1.200,00</strong></br>
+											<small>+ R$ 300,00 de condomínio</small>
+										</p>
+										<small class="d-flex justify-content-start">
+											<span class="me-3"><i class="bi bi-rulers text-primary"></i> 55 m²</span>
+											<span class="me-3"><i class="bi bi-moon text-primary"></i> 1 quarto</span>
+											<span class="me-3"><i class="bi bi-droplet text-primary"></i> 1 banheiro</span>
+										</small>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+				
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+			</div>
+
+			<hr class="featurette-divider">			
+			
+			<div class="container marketing">
+				<div class="row">
+					<div class="col-lg-4 text-center mb-3">
+						<div class=" mb-3">
+							<i class="bi bi-shop text-primary" style="font-size: 64px;"></i>
+						</div>
+						<h2>Título</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						<p><a class="btn btn-primary" href="#">Ver Mais</a></p>
+					</div>
+					<div class="col-lg-4 text-center mb-3">
+						<div class=" mb-3">
+							<i class="bi bi-bank text-primary" style="font-size: 64px;"></i>
+						</div>
+						<h2>Título</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						<p><a class="btn btn-primary" href="#">Ver Mais</a></p>
+					</div>
+					<div class="col-lg-4 text-center mb-3">
+						<div class=" mb-3">
+							<i class="bi bi-house-door text-primary" style="font-size: 64px;"></i>
+						</div>
+						<h2>Título</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						<p><a class="btn btn-primary" href="#">Ver Mais</a></p>
+					</div>
+				</div>
+				
+				<hr class="featurette-divider">
+				
+				<div class="row featurette">
+					<div class="col-md-7">
+						<h2 class="featurette-heading">Primeiro Título. <span class="text-muted">Mensagem de Destaque.</span></h2>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="col-md-5">
+						<img src="./src/img/img1.jpg" class="bd-placeholder-img bd-placeholder-img-lg img-fluid mx-auto" width="500" height="500" />
+					</div>
+				</div>
+				
+				<hr class="featurette-divider">
+				
+				<div class="row featurette">
+					<div class="col-md-7 order-md-2">
+						<h2 class="featurette-heading">Segundo Título. <span class="text-muted">Novo Destaque.</span></h2>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="col-md-5 order-md-1">
+						<img src="./src/img/img2.jpg" class="bd-placeholder-img bd-placeholder-img-lg img-fluid mx-auto" width="500" height="500" />
+					</div>
+				</div>
+				
+				<hr class="featurette-divider">
+				
+				<div class="row featurette">
+					<div class="col-md-7">
+						<h2 class="featurette-heading">Terceiro e último título. <span class="text-muted">Destaque.</span></h2>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="col-md-5">
+						<img src="./src/img/img3.jpg" class="bd-placeholder-img bd-placeholder-img-lg img-fluid mx-auto" width="500" height="500" />
+					</div>
+				</div>
+				
+				<hr class="featurette-divider">
+				
+				<!-- /END THE FEATURETTES -->
+				
+			</div><!-- /.container -->
+			
+			
+			<!-- FOOTER -->
+			<footer class="container">
+				<p class="float-end"><a href="#">Voltar ao Topo</a></p>
+				<p>&copy; 2021 Nome da Empresa, Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+			</footer>
+		</main>	
+		
+		<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+	</html>
+	
