@@ -5,47 +5,58 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-	<meta name="theme-color" content="#CCCCCC">
+	<meta name="theme-color" content="#FFFFFF">
 	
 	<title>NOME</title>
 	<link href="./src/css/bootstrap.min.css" rel="stylesheet">   
 	<link href="./src/css/bootstrap-icons.css" rel="stylesheet">   
 	<link href="./src/css/main.css" rel="stylesheet">    
 </head>
-<body>
-	
-	<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm">
-		<div class="container-fluid">
-			<a class="navbar-brand text-primary" href="#">Nome do Sistema</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<body>	
+	<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm" style="z-index: 1041;">
+		<div class="container-fluid justify-content-start">
+			<button data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"
+				class="navbar-toggler me-2 btn-light" type="button" >
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			<a class="navbar-brand text-primary" href="#">Nome do Sistema</a>
+			
+			<div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+				<div class="offcanvas-header">
+				  <h5 id="offcanvasTopLabel">Menu</h5>
+				  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav me-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link link-secondary active" aria-current="page" href="#">Buscar Imóveis</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link link-secondary" href="#">Sou Imobiliária</a>
+						</li>
+						<li class="nav-item">
+							<div class="dropdown">
+								<a class="nav-link link-secondary dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+									Sobre
+								</a>
+								
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<li><a class="dropdown-item" href="#">Sobre a Empresa</a></li>
+									<li><a class="dropdown-item" href="#">Guias/Ajuda</a></li>
+									<li><a class="dropdown-item" href="#">Parceiros</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<button class="btn btn-light me-3" type="submit">Registre-se</button>
+						<button class="btn btn-outline-secondary" type="submit">Entrar</button>
+					</form>
+				</div>
+			</div>
+
 			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav me-auto mb-2 mb-md-0">
-					<li class="nav-item">
-						<a class="nav-link link-secondary active" aria-current="page" href="#">Buscar Imóveis</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link link-secondary" href="#">Sou Imobiliária</a>
-					</li>
-					<li class="nav-item">
-						<div class="dropdown">
-							<a class="nav-link link-secondary dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-								Sobre
-							</a>
-							
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<li><a class="dropdown-item" href="#">Sobre a Empresa</a></li>
-								<li><a class="dropdown-item" href="#">Guias/Ajuda</a></li>
-								<li><a class="dropdown-item" href="#">Parceiros</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-				<form class="d-flex">
-					<button class="btn btn-light me-3" type="submit">Registre-se</button>
-					<button class="btn btn-outline-secondary" type="submit">Entrar</button>
-				</form>
+				
 			</div>
 		</div>
 	</nav>
